@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var workoutSchema = new Schema({
-    day: { type: Date, required: true },
+    day: { type: Date, default: Date.now },
     exercises: [
         {
             name: {
