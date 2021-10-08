@@ -40,4 +40,22 @@ module.exports = function (app) {
             res.json(dbWorkout);
         });
     });
+
+    // Get all workouts (... this time for stats...?)
+    app.get("/api/workouts/range", function (req, res) {
+        Workout.aggregate([
+
+            // 1. Find all workouts
+            { $match: {} },
+
+            // 2. Add the new totalDuration field which is the sum of all exercise durations
+            { $addFields: { totalDuration: { $sum: "$exercises.duration" } } }
+        ])
+            .then(dbWorkout => {
+                res.json(dbWorkout);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    });
 };
