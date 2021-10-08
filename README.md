@@ -1,7 +1,7 @@
 # workout-tracker
 
 ## Description
-Based on Assignment 18 (?) of the Full Stack Bootcamp. Create a website that will allow users to communicate with each other.
+Based on Assignment 18 (?) of the Full Stack Bootcamp. It allows users to track their workouts. 
 
 ## Technologies Used
 Node, Express, express, JavaScript,, JS, HTML, CSS, mongoose, mongodb, mongodbAtlas, Heroku
