@@ -11,7 +11,7 @@ app.use(express.json());
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/workout-tracker', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/workout', {
   useNewUrlParser: true
 });
 
