@@ -29,6 +29,9 @@ var workoutSchema = new Schema({
                 type: Number,
                 // required: "Enter the amount of sets for the exercise"
             },
+            distance: {
+                type: Number,
+            }
         }
     ],
 });
